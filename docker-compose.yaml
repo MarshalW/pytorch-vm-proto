@@ -1,0 +1,20 @@
+version: "3"
+
+networks:
+  llm:
+    name: llm
+services:
+  proto:
+    build: .
+    container_name: proto
+    restart: always
+    networks:
+      - llm
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
