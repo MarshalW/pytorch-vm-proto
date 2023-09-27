@@ -10,18 +10,14 @@
 apt update && apt upgrade -y
 
 # 安装驱动 535
-# ubuntu-drivers autoinstall
-apt install nvidia-driver-525 -y -qq
+ubuntu-drivers autoinstall
+# apt install nvidia-driver-525 -y -qq
 
 # 需要重启
 reboot
 
 # 测试驱动是否有效
 nvidia-smi
-
-# 安装 docker
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
 
 # 安装 docker
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -39,4 +35,7 @@ systemctl restart docker
 
 # 构建带 pytorch 的 docker 镜像并启动
 docker compose up -d
+
+# 测试容器是否可用
+docker exec -it proto bash
 

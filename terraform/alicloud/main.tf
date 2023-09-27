@@ -52,7 +52,8 @@ resource "alicloud_instance" "proto" {
   # system_disk_category = "cloud_essd"
 
   system_disk_size = 40
-  image_id         = "ubuntu_22_04_x64_20G_alibase_20230815.vhd"
+  image_id         = "m-t4nfrlheiy0rt1s2bpqp"
+  # image_id         = "ubuntu_22_04_x64_20G_alibase_20230815.vhd"
 
   instance_name = "proto"
   vswitch_id    = alicloud_vswitch.vsw.id
