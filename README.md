@@ -17,9 +17,11 @@ export ALICLOUD_SECRET_KEY=xxxxx
 # export ALICLOUD_REGION="cn-beijing"
 ```
 
+创建 vm
 
-复制项目：
+```bash
+# 复制项目
+git clone https://github.com/MarshalW/pytorch-vm-proto.git
+cd pytorch-vm-proto
 
-```
-git clone 
 ```
