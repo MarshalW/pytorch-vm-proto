@@ -115,3 +115,38 @@ resource "alicloud_instance" "proto" {
 # 使用完毕，销毁 vm
 ./destroy.sh
 ```
+
+运行实例, `./demos/demo-mnist.py`：
+
+```bash
+python3 demo-mnist.py
+
+$ time python3 demo-mnist.py 
+Epoch: 1, Batch: 200, Loss: 1.524
+Epoch: 1, Batch: 400, Loss: 0.700
+Epoch: 1, Batch: 600, Loss: 0.518
+Epoch: 1, Batch: 800, Loss: 0.451
+Epoch: 2, Batch: 200, Loss: 0.378
+Epoch: 2, Batch: 400, Loss: 0.360
+Epoch: 2, Batch: 600, Loss: 0.366
+Epoch: 2, Batch: 800, Loss: 0.353
+Epoch: 3, Batch: 200, Loss: 0.336
+Epoch: 3, Batch: 400, Loss: 0.318
+Epoch: 3, Batch: 600, Loss: 0.312
+Epoch: 3, Batch: 800, Loss: 0.313
+Epoch: 4, Batch: 200, Loss: 0.298
+Epoch: 4, Batch: 400, Loss: 0.293
+Epoch: 4, Batch: 600, Loss: 0.300
+Epoch: 4, Batch: 800, Loss: 0.282
+Epoch: 5, Batch: 200, Loss: 0.282
+Epoch: 5, Batch: 400, Loss: 0.271
+Epoch: 5, Batch: 600, Loss: 0.268
+Epoch: 5, Batch: 800, Loss: 0.264
+Training finished.
+Accuracy on test set: 92.80%
+Using device: cuda
+
+real    1m0.355s
+user    1m40.614s
+sys     0m0.921s
+```
