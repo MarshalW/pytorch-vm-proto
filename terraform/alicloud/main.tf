@@ -35,8 +35,9 @@ resource "alicloud_security_group_rule" "allow_all_tcp" {
 
 # ip 地址，基于流量计费
 resource "alicloud_eip_address" "eip" {
-  bandwidth    = "100"
-  payment_type = "PayAsYouGo"
+  bandwidth            = "100"
+  internet_charge_type = "PayByTraffic"
+  # payment_type         = "PayAsYouGo"
 }
 
 # vm - 抢占

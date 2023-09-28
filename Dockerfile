@@ -7,4 +7,5 @@ RUN apt-get update \
         git \
         -y -qq
 
-RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+RUN pip3 install torch torchvision torchaudio \
+    --index-url https://download.pytorch.org/whl/cu118

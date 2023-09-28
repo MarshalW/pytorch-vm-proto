@@ -12,6 +12,8 @@ import torchvision.transforms as transforms
 请注意，这只是一个最简易的示例，实际的训练和推理过程可能需要更多的细节和调整，具体取决于任务和数据集的复杂性。
 '''
 
+device = torch.device("cpu")
+
 # 数据预处理
 transform = transforms.Compose([
     transforms.ToTensor(),
